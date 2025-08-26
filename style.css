@@ -147,3 +147,80 @@ body{
   .card{ min-height: 580px; }
   #stem{ font-size:32px; }
 }
+/* ───────────────── 레이아웃 고정: 카드 내부 구조 안정화 ───────────────── */
+
+/* 카드 전체를 세로 플렉스로 만들고, 높이를 충분히 확보 */
+.quiz-screen.card{
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;            /* 필요시 580~660 사이에서 조절 */
+}
+
+/* 진행바는 고정 영역 */
+.quiz-screen .progress-wrapper{
+  flex: 0 0 auto;
+}
+
+/* 문제 문장(#stem): 고정 최소 높이 + 가운데 정렬 → 줄 길이 달라도 점프 방지 */
+#stem{
+  flex: 0 0 auto;
+  min-height: 110px;            /* 문제 길이에 맞춰 96~130px로 조절 가능 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* 보기(choices): 스크롤 가능한 고정 구역
+   - min/max로 영역을 확보하고, 내용이 넘치면 이 안에서만 스크롤 */
+.choices{
+  flex: 1 1 auto;               /* 남는 공간을 우선 차지 */
+  min-height: 260px;            /* 2x2 그리드 기준 여유 */
+  max-height: 320px;            /* 너무 길어지면 내부 스크롤 */
+  overflow: auto;
+  padding-right: 2px;           /* 스크롤바 겹침 방지 소량 여백 */
+}
+
+/* 해설(answer): 별도 고정 구역 + 내부 스크롤
+   - More 펼쳐져도 이 박스 안에서만 스크롤 발생 → 전체 레이아웃 안정 */
+.answer{
+  flex: 0 0 auto;
+  min-height: 180px;            /* 해설 한두 문단 기준 */
+  max-height: 220px;            /* 길면 이 안에서만 스크롤 */
+  overflow: auto;
+  padding-right: 2px;
+}
+
+/* 다음 버튼(actions): 항상 카드 맨 아래 고정 */
+.actions{
+  flex: 0 0 auto;
+  margin-top: 12px;
+}
+
+/* More 본문(이미 전환을 쓰고 있으므로 그대로 유지).
+   해설 박스가 스크롤을 담당하므로 펼칠 때 전체 점프 없음 */
+.more-body{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  margin-top: 10px;
+  padding: 0 14px;
+  background:#243447;
+  border:1px solid #334155;
+  border-radius:10px;
+}
+.more-body.open{
+  max-height: 360px;            /* 내용에 따라 280~420 사이 조절 */
+  padding: 12px 14px;
+}
+
+/* 보기 버튼 높이/간격이 커서 작은 화면에서 넘칠 수 있으니, 모바일에서 약간 줄이기 */
+@media (max-width: 480px){
+  .quiz-screen.card{ min-height: 640px; }     /* 모바일은 약간 더 높게 */
+  #stem{ min-height: 96px; font-size: 26px; }
+  .choices{ min-height: 240px; max-height: 300px; }
+  .choices button{ padding: 16px; font-size: 16px; }
+  .answer{ min-height: 160px; max-height: 220px; }
+}
+
