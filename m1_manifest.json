@@ -1,11 +1,9 @@
 {
-  "files": [
-    "data/m1_1-20.json",
-    "data/m1_21-40.json",
-    "data/m1_41-60.json",
-    "data/m1_61-80.json",
-    "data/m1_81-100.json"
+  "sets": [
+    { "label": "세트 1 (1~20)",   "files": ["data/m1_1-20.json"] },
+    { "label": "세트 2 (21~40)",  "files": ["data/m1_21-40.json"] },
+    { "label": "세트 3 (41~60)",  "files": ["data/m1_41-60.json"] },
+    { "label": "세트 4 (61~80)",  "files": ["data/m1_61-80.json"] },
+    { "label": "세트 5 (81~100)", "files": ["data/m1_81-100.json"] }
   ]
 }
-
-  
