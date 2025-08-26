@@ -150,3 +150,72 @@ body{
   .quiz-screen.card{ min-height:640px; }
   #stem{ font-size:30px; }
 }
+/* ======= 컴팩트 원스크린 모드(덮어쓰기) ======= */
+
+/* 카드: 뷰포트 높이에 맞춰 고정(스크롤 없음) */
+.quiz-screen.card{
+  height: clamp(520px, 78vh, 640px);  /* 화면에 맞춰 자동 조정 */
+  min-height: auto;                   /* 이전 값 무시 */
+  padding: 24px;                      /* 패딩 축소 */
+  gap: 8px;
+}
+
+/* 진행바: 높이/여백 컴팩트 */
+.quiz-screen .progress-wrapper{ margin-bottom: 8px; }
+#progress-bar{ height: 10px; }
+
+/* 문제(#stem): 두 줄까지만 표시 + 가운데 정렬(줄바꿈/말줄임) */
+#stem{
+  font-size: 26px;
+  margin: 8px 0;
+  min-height: 72px;
+  max-height: 92px;
+  line-height: 1.35;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;          /* 두 줄 고정 */
+  -webkit-box-orient: vertical;
+}
+
+/* 보기(2x2): 고정 높이로 통일, 내부 스크롤 금지 */
+.choices{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  min-height: 200px;
+  max-height: 220px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.choices button{
+  height: 78px;                    /* 버튼 높이 통일 */
+  padding: 10px;
+  font-size: 16px;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+/* 해설: 한 화면에 맞게 고정 높이 + 내부 스크롤 */
+.answer{
+  min-height: 110px;
+  max-height: 120px;
+  font-size: 14px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+/* More 본문: 컴팩트 높이 */
+.more-body{ transition: max-height .25s ease, padding .25s ease; }
+.more-body.open{ max-height: 160px; }
+
+/* 다음 버튼: 카드 하단 고정 */
+.actions{ margin-top: auto; }
+
+/* 모바일(≤640px): 세로 1열이지만 여전히 원스크린로 맞춤 */
+@media (max-width: 640px){
+  .quiz-screen.card{ height: clamp(540px, 84vh, 640px); padding: 20px; }
+  #stem{ font-size: 24px; min-height: 64px; max-height: 86px; }
+  .choices{ grid-template-columns: 1fr; min-height: 220px; max-height: 240px; }
+  .choices button{ height: 70px; font-size: 15px; }
+  .answer{ min-height: 110px; max-height: 120px; font-size: 13.5px; }
+}
+
