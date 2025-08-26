@@ -1,0 +1,203 @@
+[
+    {
+      "id": 81,
+      "stem": "I ___ to the park yesterday.",
+      "choices": ["go", "goes", "went", "gone"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "go의 과거형은 went.",
+      "explain_long": "일반동사 go의 과거형은 went이다.",
+      "examples": ["I went to school yesterday.", "She went shopping."]
+    },
+    {
+      "id": 82,
+      "stem": "She ___ English last night.",
+      "choices": ["study", "studied", "studies", "studying"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "일반동사 과거형: -ed.",
+      "explain_long": "규칙동사는 동사원형에 -ed를 붙여 과거형을 만든다.",
+      "examples": ["He studied hard.", "They played soccer."]
+    },
+    {
+      "id": 83,
+      "stem": "He ___ not watch TV yesterday.",
+      "choices": ["do", "does", "did", "did not"],
+      "answer": 3,
+      "grade": "중1",
+      "explain_short": "과거 부정문: did not + 동사원형.",
+      "explain_long": "일반동사의 과거 부정문은 did not + 동사원형으로 만든다.",
+      "examples": ["I did not eat breakfast.", "She did not call me."]
+    },
+    {
+      "id": 84,
+      "stem": "___ you go to the library yesterday?",
+      "choices": ["Do", "Does", "Did", "Are"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "과거 의문문: Did + 주어 + 동사원형?",
+      "explain_long": "일반동사의 과거 의문문은 did를 사용한다.",
+      "examples": ["Did you see him?", "Did they come here?"]
+    },
+    {
+      "id": 85,
+      "stem": "I ___ happy yesterday.",
+      "choices": ["am", "is", "was", "were"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "be동사 과거형: I → was.",
+      "explain_long": "I, he, she, it에는 was를 사용한다.",
+      "examples": ["I was late.", "She was sick yesterday."]
+    },
+    {
+      "id": 86,
+      "stem": "They ___ at home last Sunday.",
+      "choices": ["was", "were", "are", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "be동사 과거형: 복수 주어 → were.",
+      "explain_long": "we, you, they에는 were를 사용한다.",
+      "examples": ["We were in Seoul.", "They were busy."]
+    },
+    {
+      "id": 87,
+      "stem": "Where ___ you born?",
+      "choices": ["is", "are", "was", "were"],
+      "answer": 3,
+      "grade": "중1",
+      "explain_short": "be동사 과거 의문문: were you born?",
+      "explain_long": "출생지를 물을 때 Where were you born?을 사용한다.",
+      "examples": ["I was born in Korea.", "He was born in 2010."]
+    },
+    {
+      "id": 88,
+      "stem": "What ___ she do yesterday?",
+      "choices": ["do", "does", "did", "done"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "의문사 + did + 주어 + 동사원형.",
+      "explain_long": "과거의 행위를 물을 때 did를 사용한다.",
+      "examples": ["What did you eat?", "What did they say?"]
+    },
+    {
+      "id": 89,
+      "stem": "When ___ you get up this morning?",
+      "choices": ["do", "does", "did", "done"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "과거 의문문은 did.",
+      "explain_long": "과거 시점(…this morning)에서는 did를 쓴다.",
+      "examples": ["When did you arrive?", "When did she call?"]
+    },
+    {
+      "id": 90,
+      "stem": "She ___ to music every evening.",
+      "choices": ["listen", "listens", "listened", "listening"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "3인칭 단수 현재: -s.",
+      "explain_long": "일반동사 현재형은 3인칭 단수에 -s를 붙인다.",
+      "examples": ["He plays soccer.", "She reads a book."]
+    },
+    {
+      "id": 91,
+      "stem": "We ___ playing soccer now.",
+      "choices": ["is", "are", "am", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "현재진행: 주어 We → are.",
+      "explain_long": "현재진행형은 be + 동사-ing.",
+      "examples": ["We are eating lunch.", "They are studying."]
+    },
+    {
+      "id": 92,
+      "stem": "He ___ always kind to his friends.",
+      "choices": ["is", "are", "was", "were"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "be동사 + 빈도부사.",
+      "explain_long": "be동사 뒤에는 빈도부사(always, often, usually, sometimes, never)가 온다.",
+      "examples": ["She is always late.", "They are never angry."]
+    },
+    {
+      "id": 93,
+      "stem": "___ is at the door?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "사람 주어 의문사 → who.",
+      "explain_long": "사람을 주어로 묻는 의문문은 who로 시작한다.",
+      "examples": ["Who is your teacher?", "Who is calling?"]
+    },
+    {
+      "id": 94,
+      "stem": "___ color do you like?",
+      "choices": ["Who", "What", "Which", "Where"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "선택을 묻는 의문사 which.",
+      "explain_long": "한정된 범위 중에서 선택을 물을 때 which를 사용한다.",
+      "examples": ["Which subject do you like?", "Which bag is yours?"]
+    },
+    {
+      "id": 95,
+      "stem": "___ is your best friend?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "사람을 묻는 의문사 who.",
+      "explain_long": "인물을 물을 때 who를 쓴다.",
+      "examples": ["Who is your teacher?", "Who is that man?"]
+    },
+    {
+      "id": 96,
+      "stem": "___ do you usually do on Sundays?",
+      "choices": ["What", "When", "Where", "Who"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "행위를 묻는 의문사 what.",
+      "explain_long": "행동/활동을 물을 때 what을 사용한다.",
+      "examples": ["What do you eat for breakfast?", "What do you do after school?"]
+    },
+    {
+      "id": 97,
+      "stem": "Let’s ___ a movie together.",
+      "choices": ["watch", "watches", "watching", "watched"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "Let’s + 동사원형.",
+      "explain_long": "함께 하자고 제안할 때 Let’s + 동사원형.",
+      "examples": ["Let’s play soccer.", "Let’s eat dinner."]
+    },
+    {
+      "id": 98,
+      "stem": "It is time to ___ dinner.",
+      "choices": ["have", "has", "having", "had"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "to부정사 관용표현.",
+      "explain_long": "It is time to + 동사원형 → ~할 시간이다.",
+      "examples": ["It is time to go home.", "It is time to sleep."]
+    },
+    {
+      "id": 99,
+      "stem": "I have to ___ my homework now.",
+      "choices": ["do", "does", "did", "done"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "의무: have to + 동사원형.",
+      "explain_long": "have to는 must와 같은 뜻으로 ‘~해야 한다’는 의미이다.",
+      "examples": ["I have to study tonight.", "She has to clean her room."]
+    },
+    {
+      "id": 100,
+      "stem": "Would you like ___ some tea?",
+      "choices": ["have", "to have", "having", "had"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "공손한 제안: would you like to + 동사원형.",
+      "explain_long": "공손하게 권유/제안할 때 would you like to + 동사원형.",
+      "examples": ["Would you like to sit here?", "Would you like to join us?"]
+    }
+  ]
+  

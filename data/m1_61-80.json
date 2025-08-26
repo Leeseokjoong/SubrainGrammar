@@ -1,0 +1,203 @@
+[
+    {
+      "id": 61,
+      "stem": "How ___ is this T-shirt?",
+      "choices": ["many", "much", "long", "often"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "가격·양 → how much.",
+      "explain_long": "가격, 양을 물을 때는 how much를 사용한다.",
+      "examples": ["How much is this book?", "How much water do you want?"]
+    },
+    {
+      "id": 62,
+      "stem": "How ___ apples are on the table?",
+      "choices": ["many", "much", "often", "long"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "가산 복수 → how many.",
+      "explain_long": "가산 명사의 수를 물을 때 how many를 쓴다.",
+      "examples": ["How many students are there?", "How many chairs do you need?"]
+    },
+    {
+      "id": 63,
+      "stem": "How ___ do you play the piano?",
+      "choices": ["much", "long", "often", "many"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "빈도 → how often.",
+      "explain_long": "빈도를 물을 때 how often을 사용한다.",
+      "examples": ["How often do you exercise?", "How often does she visit you?"]
+    },
+    {
+      "id": 64,
+      "stem": "How ___ does it take to get to school?",
+      "choices": ["often", "long", "many", "much"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "소요 시간 → how long.",
+      "explain_long": "시간의 길이를 물을 때 how long을 쓴다.",
+      "examples": ["How long does it take to cook this?", "How long is the movie?"]
+    },
+    {
+      "id": 65,
+      "stem": "I am going to ___ my grandparents this weekend.",
+      "choices": ["visit", "visits", "visited", "visiting"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "미래계획: be going to + 동사원형.",
+      "explain_long": "be going to + 동사원형으로 가까운 미래의 계획을 표현한다.",
+      "examples": ["I am going to study tonight.", "She is going to buy a new bag."]
+    },
+    {
+      "id": 66,
+      "stem": "He is going to ___ a doctor.",
+      "choices": ["be", "is", "was", "being"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "미래 직업: be going to + be.",
+      "explain_long": "직업이나 상태 변화를 나타낼 때 be going to + be를 사용한다.",
+      "examples": ["I am going to be a teacher.", "She is going to be a singer."]
+    },
+    {
+      "id": 67,
+      "stem": "I want to ___ a new bicycle.",
+      "choices": ["buy", "buys", "buying", "bought"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "want to + 동사원형.",
+      "explain_long": "소망·의도를 나타낼 때 want to + 동사원형을 사용한다.",
+      "examples": ["I want to eat pizza.", "They want to visit London."]
+    },
+    {
+      "id": 68,
+      "stem": "She likes ___ songs.",
+      "choices": ["sing", "sings", "to sing", "singing"],
+      "answer": 3,
+      "grade": "중1",
+      "explain_short": "like + 동명사.",
+      "explain_long": "일반적으로 like 뒤에는 동명사(-ing)를 많이 쓴다.",
+      "examples": ["I like reading books.", "He likes swimming."]
+    },
+    {
+      "id": 69,
+      "stem": "This is ___ book.",
+      "choices": ["I", "me", "my", "mine"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "소유격: my + 명사.",
+      "explain_long": "소유격(my/your/his/her) + 명사.",
+      "examples": ["This is my pen.", "That is her bag."]
+    },
+    {
+      "id": 70,
+      "stem": "That pen is ___.",
+      "choices": ["I", "me", "my", "mine"],
+      "answer": 3,
+      "grade": "중1",
+      "explain_short": "소유대명사 mine.",
+      "explain_long": "소유격 뒤에 명사가 없을 때는 소유대명사(mine/yours/hers).",
+      "examples": ["This book is mine.", "That house is theirs."]
+    },
+    {
+      "id": 71,
+      "stem": "Can you help ___?",
+      "choices": ["I", "my", "me", "mine"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "목적격: me.",
+      "explain_long": "동사/전치사의 목적어로는 목적격(me/him/her/us/them)을 사용한다.",
+      "examples": ["Please call me.", "I know him."]
+    },
+    {
+      "id": 72,
+      "stem": "This is ___ umbrella. (그의 우산)",
+      "choices": ["he", "him", "his", "himself"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "소유격 his.",
+      "explain_long": "소유격(his/her/its) + 명사.",
+      "examples": ["This is his bag.", "That is her car."]
+    },
+    {
+      "id": 73,
+      "stem": "We are ___ home now.",
+      "choices": ["in", "on", "at", "by"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "at home.",
+      "explain_long": "특정 장소(집, 학교 등)는 at을 자주 쓴다.",
+      "examples": ["He is at school.", "She is at the station."]
+    },
+    {
+      "id": 74,
+      "stem": "Let’s ___ to the park.",
+      "choices": ["go", "goes", "going", "gone"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "Let’s + 동사원형.",
+      "explain_long": "함께 하자고 제안할 때 Let’s + 동사원형을 쓴다.",
+      "examples": ["Let’s play soccer.", "Let’s eat lunch."]
+    },
+    {
+      "id": 75,
+      "stem": "There is a store ___ the bank.",
+      "choices": ["next to", "in", "on", "under"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "위치 표현: next to.",
+      "explain_long": "장소를 설명할 때 next to, in front of, behind 등을 쓴다.",
+      "examples": ["The school is next to the park.", "The bus stop is next to the hospital."]
+    },
+    {
+      "id": 76,
+      "stem": "The cat is ___ the box.",
+      "choices": ["in", "on", "under", "next to"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "위치: in.",
+      "explain_long": "물체 안에 있을 때 in을 사용한다.",
+      "examples": ["in the room", "in the bag"]
+    },
+    {
+      "id": 77,
+      "stem": "The picture is ___ the wall.",
+      "choices": ["in", "on", "at", "under"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "표면 위에 있을 때 on.",
+      "explain_long": "물체가 표면에 붙어 있을 때 on을 쓴다.",
+      "examples": ["on the desk", "on the floor"]
+    },
+    {
+      "id": 78,
+      "stem": "The shoes are ___ the bed.",
+      "choices": ["in", "on", "under", "over"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "아래 → under.",
+      "explain_long": "물체가 다른 물체 아래에 있을 때 under를 쓴다.",
+      "examples": ["under the chair", "under the table"]
+    },
+    {
+      "id": 79,
+      "stem": "We walked ___ the street.",
+      "choices": ["in", "on", "along", "under"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "방향: along.",
+      "explain_long": "방향을 나타낼 때 along(…을 따라) 를 사용한다.",
+      "examples": ["along the river", "along the road"]
+    },
+    {
+      "id": 80,
+      "stem": "He is standing ___ the bus stop.",
+      "choices": ["in", "on", "at", "by"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "구체적인 지점 → at.",
+      "explain_long": "정확한 위치(버스 정류장, 문 앞 등)는 at을 쓴다.",
+      "examples": ["at the door", "at the station"]
+    }
+  ]
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>수브레인 문법 퀴즈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>수브레인 문법 퀴즈 프로그램</h1>
+    <p class="subtitle">문제를 풀고 해설을 확인하세요</p>
+  </header>
+
+  <main id="quiz">
+    <!-- 파일 선택 -->
+    <div class="controls">
+      <label class="file-label">
+        <input type="file" id="file-input" accept=".json">
+        문제 파일 선택
+      </label>
+    </div>
+
+    <!-- 시작 화면 -->
+    <div class="start-screen">
+      <button id="start-btn" class="btn-green">🚀 퀴즈 시작</button>
+    </div>
+
+    <!-- 퀴즈 화면 -->
+    <div class="quiz-screen card" style="display:none;">
+      <!-- 진행 영역 -->
+      <div class="progress-wrapper">
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <span id="progress-count">0/0</span>
+      </div>
+
+      <div id="stem">문제가 여기에 표시됩니다.</div>
+
+      <div class="choices"></div>
+
+      <div class="answer"></div>
+
+      <div class="actions">
+        <button id="next-btn" class="btn-blue">다음 ▶</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

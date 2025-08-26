@@ -1,0 +1,233 @@
+[
+    {
+      "id": 1,
+      "stem": "I ___ a student.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "I와 함께 쓰는 be동사는 am.",
+      "explain_long": "be동사는 주어에 따라 am/is/are로 변하며, 주어가 I일 때는 항상 am을 사용한다.",
+      "examples": ["I am happy today.", "I am from Seoul."]
+    },
+    {
+      "id": 2,
+      "stem": "He ___ my friend.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "He와 함께 쓰는 be동사는 is.",
+      "explain_long": "주어가 He/She/It인 경우 be동사는 is를 사용한다.",
+      "examples": ["He is a teacher.", "He is very kind."]
+    },
+    {
+      "id": 3,
+      "stem": "They ___ in the park.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "복수 주어에는 are.",
+      "explain_long": "주어가 They/We/You일 때 be동사는 are를 사용한다.",
+      "examples": ["They are my classmates.", "They are playing soccer."]
+    },
+    {
+      "id": 4,
+      "stem": "She ___ at home.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "She와 함께 쓰는 be동사는 is.",
+      "explain_long": "3인칭 단수 주어(She/He/It)에는 is를 사용한다.",
+      "examples": ["She is watching TV.", "She is my sister."]
+    },
+    {
+      "id": 5,
+      "stem": "You ___ very kind.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "You에는 항상 are.",
+      "explain_long": "You가 단수이든 복수이든 you+are 구조이다.",
+      "examples": ["You are welcome.", "You are my friend."]
+    },
+    {
+      "id": 6,
+      "stem": "It ___ cold today.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "날씨를 말할 때는 It is.",
+      "explain_long": "날씨 표현에서는 주어 It에 is를 사용하여 It is raining/sunny 등으로 말한다.",
+      "examples": ["It is raining now.", "It is very hot."]
+    },
+    {
+      "id": 7,
+      "stem": "This ___ my pen.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "단수 지시대명사 This+is.",
+      "explain_long": "This/That은 단수 지시대명사이므로 is와 함께 쓴다.",
+      "examples": ["This is my book.", "This is interesting."]
+    },
+    {
+      "id": 8,
+      "stem": "Those ___ expensive.",
+      "choices": ["am", "is", "are", "be"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "복수 지시대명사 Those+are.",
+      "explain_long": "Those/These는 복수이므로 are를 사용한다.",
+      "examples": ["Those are my shoes.", "Those are too heavy."]
+    },
+    {
+      "id": 9,
+      "stem": "Tom ___ to school by bus.",
+      "choices": ["go", "goes", "going", "gone"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "3인칭 단수는 동사+es.",
+      "explain_long": "일반동사는 주어가 3인칭 단수(he/she/it/단수 이름)일 때 동사에 -s 또는 -es를 붙인다.",
+      "examples": ["She goes to the library.", "He goes home at 5 o’clock."]
+    },
+    {
+      "id": 10,
+      "stem": "I ___ my homework every day.",
+      "choices": ["do", "does", "doing", "did"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "I 주어의 현재형 동사는 do.",
+      "explain_long": "주어 I/You/We/They와 함께 쓰일 때 일반동사는 원형(do)을 사용한다.",
+      "examples": ["I do my chores on Sunday.", "They do homework together."]
+    },
+    {
+        "id": 11,
+        "stem": "___ you like pizza?",
+        "choices": ["Do", "Does", "Are", "Is"],
+        "answer": 0,
+        "grade": "중1",
+        "explain_short": "you+의문문 조동사→Do.",
+        "explain_long": "주어가 you/We/They일 때 의문문 조동사는 Do이다.",
+        "examples": [
+          "Do you play soccer?",
+          "Do you know her?"
+        ]
+      },
+      {
+        "id": 12,
+        "stem": "___ he play the guitar?",
+        "choices": ["Do", "Does", "Is", "Are"],
+        "answer": 1,
+        "grade": "중1",
+        "explain_short": "3인칭 단수 의문문→Does.",
+        "explain_long": "주어가 3인칭 단수일 때 의문문 조동사는 Does이다.",
+        "examples": [
+          "Does she like coffee?",
+          "Does it work?"
+        ]
+      },
+      {
+        "id": 13,
+        "stem": "She ___ not like coffee.",
+        "choices": ["do", "does", "is", "are"],
+        "answer": 1,
+        "grade": "중1",
+        "explain_short": "3인칭 단수 부정문→does not.",
+        "explain_long": "부정문은 조동사 뒤에 not을 붙여 만든다.",
+        "examples": [
+          "He does not eat meat.",
+          "It does not matter."
+        ]
+      },
+      {
+        "id": 14,
+        "stem": "We ___ to school by bus.",
+        "choices": ["go", "goes", "are going", "going"],
+        "answer": 0,
+        "grade": "중1",
+        "explain_short": "We 주어에는 동사 원형.",
+        "explain_long": "주어가 we/you/they일 때 일반동사는 원형을 사용한다.",
+        "examples": [
+          "We go shopping on weekends.",
+          "They go to the park."
+        ]
+      },
+      {
+        "id": 15,
+        "stem": "She is ___ a book.",
+        "choices": ["read", "reads", "reading", "to read"],
+        "answer": 2,
+        "grade": "중1",
+        "explain_short": "현재진행형→be + 동사+ing.",
+        "explain_long": "진행형은 be동사 뒤에 동사원형+ing를 붙여 만든다.",
+        "examples": [
+          "She is watching TV.",
+          "She is eating lunch."
+        ]
+      },
+      {
+        "id": 16,
+        "stem": "They ___ soccer every Saturday.",
+        "choices": ["play", "plays", "are playing", "played"],
+        "answer": 0,
+        "grade": "중1",
+        "explain_short": "복수 주어에는 동사 원형.",
+        "explain_long": "They/We/You 주어 시 현재형 동사는 동사 원형을 사용한다.",
+        "examples": [
+          "They play basketball too.",
+          "We play games after school."
+        ]
+      },
+      {
+        "id": 17,
+        "stem": "There ___ a cat on the roof.",
+        "choices": ["is", "are", "am", "be"],
+        "answer": 0,
+        "grade": "중1",
+        "explain_short": "단수명사 존재표현→There is.",
+        "explain_long": "‘There is/are’ 구문에서 명사가 단수이면 is, 복수이면 are를 쓴다.",
+        "examples": [
+          "There is a book on the desk.",
+          "There is an apple in the basket."
+        ]
+      },
+      {
+        "id": 18,
+        "stem": "There ___ many books on the shelf.",
+        "choices": ["is", "are", "am", "be"],
+        "answer": 1,
+        "grade": "중1",
+        "explain_short": "복수명사 존재표현→There are.",
+        "explain_long": "‘There are’ 다음에는 복수명사가 온다.",
+        "examples": [
+          "There are two windows.",
+          "There are some chairs here."
+        ]
+      },
+      {
+        "id": 19,
+        "stem": "My brother ___ a doctor.",
+        "choices": ["am", "is", "are", "be"],
+        "answer": 1,
+        "grade": "중1",
+        "explain_short": "3인칭 단수 be동사→is.",
+        "explain_long": "직업을 말할 때 현재형 be동사를 사용한다.",
+        "examples": [
+          "He is a student.",
+          "She is an engineer."
+        ]
+      },
+      {
+        "id": 20,
+        "stem": "I ___ not tired.",
+        "choices": ["am", "is", "are", "be"],
+        "answer": 0,
+        "grade": "중1",
+        "explain_short": "I 부정문→am not.",
+        "explain_long": "부정형은 be동사 뒤에 not을 붙인다.",
+        "examples": [
+          "I am not hungry.",
+          "I am not late."
+        ]
+      }
+    ]
+  

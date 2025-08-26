@@ -1,0 +1,203 @@
+[
+    {
+      "id": 21,
+      "stem": "I ___ play the piano.",
+      "choices": ["can", "cans", "could", "am"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "능력 표현은 can + 동사원형.",
+      "explain_long": "can은 ‘~할 수 있다’라는 뜻으로 동사원형과 함께 쓰인다.",
+      "examples": ["I can swim well.", "She can ride a bike."]
+    },
+    {
+      "id": 22,
+      "stem": "You ___ run in the hall.",
+      "choices": ["must", "mustn’t", "don’t must", "are"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "금지를 나타낼 때 mustn’t.",
+      "explain_long": "mustn’t은 강한 금지의 의미를 나타낸다.",
+      "examples": ["You mustn’t smoke here.", "Students mustn’t cheat on tests."]
+    },
+    {
+      "id": 23,
+      "stem": "You ___ see a doctor.",
+      "choices": ["had better", "have better", "better", "had best"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "충고: had better + 동사원형.",
+      "explain_long": "상대에게 조언을 줄 때 had better를 사용한다.",
+      "examples": ["You had better study hard.", "We had better go now."]
+    },
+    {
+      "id": 24,
+      "stem": "___ quiet, please.",
+      "choices": ["Be", "Is", "Are", "Am"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "명령문은 동사원형으로 시작.",
+      "explain_long": "be동사도 명령문에서는 Be + 보어 형태로 쓴다.",
+      "examples": ["Be careful!", "Be kind to others."]
+    },
+    {
+      "id": 25,
+      "stem": "Close the window, ___?",
+      "choices": ["do you", "don’t you", "will you", "are you"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "부가의문문: 명령문 + will you?",
+      "explain_long": "명령문 뒤에는 will you? 또는 won’t you?를 붙여 부가의문문을 만든다.",
+      "examples": ["Open the door, will you?", "Sit down, won’t you?"]
+    },
+    {
+      "id": 26,
+      "stem": "This book is ___ than that one.",
+      "choices": ["cheap", "cheaper", "cheapest", "more cheap"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "비교급: 형용사+er.",
+      "explain_long": "한 음절 형용사는 er을 붙여 비교급을 만든다.",
+      "examples": ["My house is bigger than yours.", "She is taller than her brother."]
+    },
+    {
+      "id": 27,
+      "stem": "He is the ___ student in the class.",
+      "choices": ["smart", "smarter", "smartest", "more smart"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "최상급: the + 형용사-est.",
+      "explain_long": "형용사에 est를 붙여 최상급을 만든다.",
+      "examples": ["She is the tallest girl.", "This is the best movie."]
+    },
+    {
+      "id": 28,
+      "stem": "We have English class ___ Monday.",
+      "choices": ["in", "on", "at", "for"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "요일 앞에는 on.",
+      "explain_long": "날짜/요일에는 on을 사용한다.",
+      "examples": ["on Sunday", "on May 5th"]
+    },
+    {
+      "id": 29,
+      "stem": "My birthday is ___ May.",
+      "choices": ["in", "on", "at", "for"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "월/계절/년도 앞에는 in.",
+      "explain_long": "in May, in summer, in 2024와 같이 사용한다.",
+      "examples": ["in winter", "in July"]
+    },
+    {
+      "id": 30,
+      "stem": "The meeting is ___ 3 p.m.",
+      "choices": ["in", "on", "at", "for"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "시각 앞에는 at.",
+      "explain_long": "at + 시각.",
+      "examples": ["at 5 o’clock", "at midnight"]
+    },
+    {
+      "id": 31,
+      "stem": "There are ___ apples in the basket.",
+      "choices": ["some", "any", "much", "many"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "긍정문에는 some.",
+      "explain_long": "some은 긍정문에서, any는 주로 부정문/의문문에서 사용한다.",
+      "examples": ["I have some friends.", "There are some pencils."]
+    },
+    {
+      "id": 32,
+      "stem": "There aren’t ___ chairs in the room.",
+      "choices": ["some", "any", "much", "many"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "부정문에는 any.",
+      "explain_long": "부정문/의문문에서 any를 사용한다.",
+      "examples": ["I don’t have any money.", "Are there any students?"]
+    },
+    {
+      "id": 33,
+      "stem": "How ___ students are there in your class?",
+      "choices": ["much", "many", "some", "any"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "가산명사 수 → many.",
+      "explain_long": "many는 가산명사 복수형과 함께 수를 묻는다.",
+      "examples": ["How many books?", "How many teachers?"]
+    },
+    {
+      "id": 34,
+      "stem": "How ___ milk is in the glass?",
+      "choices": ["much", "many", "some", "any"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "불가산명사 양 → much.",
+      "explain_long": "much는 불가산명사의 양을 묻는다.",
+      "examples": ["How much water?", "How much sugar?"]
+    },
+    {
+      "id": 35,
+      "stem": "___ is knocking at the door?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "사람을 묻는 의문사 who.",
+      "explain_long": "사람의 주어 역할에는 who를 쓴다.",
+      "examples": ["Who is your teacher?", "Who lives there?"]
+    },
+    {
+      "id": 36,
+      "stem": "___ is your favorite subject?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "사물/것을 묻는 의문사 what.",
+      "explain_long": "무엇인지 물을 때 what을 쓴다.",
+      "examples": ["What is your name?", "What do you want?"]
+    },
+    {
+      "id": 37,
+      "stem": "___ do you go to school?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "장소를 묻는 의문사 where.",
+      "explain_long": "장소/위치를 물을 때 where를 쓴다.",
+      "examples": ["Where are you from?", "Where is my bag?"]
+    },
+    {
+      "id": 38,
+      "stem": "___ do you usually get up?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 3,
+      "grade": "중1",
+      "explain_short": "시간을 묻는 의문사 when.",
+      "explain_long": "시각/시간을 물을 때 when을 쓴다.",
+      "examples": ["When is your birthday?", "When do you go home?"]
+    },
+    {
+      "id": 39,
+      "stem": "___ is your teacher standing?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "장소를 묻는 의문사 where.",
+      "explain_long": "장소/위치를 물을 때 where를 쓴다.",
+      "examples": ["Where is he now?", "Where do you live?"]
+    },
+    {
+      "id": 40,
+      "stem": "___ is playing the piano now?",
+      "choices": ["Who", "What", "Where", "When"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "사람 주어를 묻는 의문사 who.",
+      "explain_long": "사람의 동작 주어를 물을 때 who를 쓴다.",
+      "examples": ["Who is singing?", "Who is helping you?"]
+    }
+  ]
+  

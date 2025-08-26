@@ -1,0 +1,203 @@
+[
+    {
+      "id": 41,
+      "stem": "Are you ___ homework now?",
+      "choices": ["do", "did", "doing", "does"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "현재진행: be + -ing.",
+      "explain_long": "진행 중인 동작을 묻는 질문은 be동사 + 주어 + 동사-ing 형태이다.",
+      "examples": ["Are you studying English?", "Is she watching TV?"]
+    },
+    {
+      "id": 42,
+      "stem": "She ___ TV when I called her.",
+      "choices": ["watch", "is watching", "was watching", "watched"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "과거진행형: was/were + -ing.",
+      "explain_long": "과거 특정 시점에 진행 중이던 행동은 was/were + 동사-ing으로 표현한다.",
+      "examples": ["He was sleeping at 10.", "They were playing soccer."]
+    },
+    {
+      "id": 43,
+      "stem": "What time ___ you usually get up?",
+      "choices": ["do", "does", "are", "is"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "습관 → do/does + 주어 + 동사.",
+      "explain_long": "일상적인 습관이나 반복 행동을 묻는 문장은 일반 현재 시제로 쓴다.",
+      "examples": ["What time do you go to school?", "When do you eat breakfast?"]
+    },
+    {
+      "id": 44,
+      "stem": "Does your brother ___ baseball?",
+      "choices": ["play", "plays", "playing", "played"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "Does 의문문 뒤에는 동사원형.",
+      "explain_long": "조동사 Does가 오면 본동사는 원형으로 쓴다.",
+      "examples": ["Does she like apples?", "Does it work well?"]
+    },
+    {
+      "id": 45,
+      "stem": "There ___ a lot of water in the bottle.",
+      "choices": ["is", "are", "am", "be"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "불가산명사 → There is.",
+      "explain_long": "불가산명사 단수 취급: There is + water/milk/sugar.",
+      "examples": ["There is some juice.", "There is milk in the glass."]
+    },
+    {
+      "id": 46,
+      "stem": "There ___ two dogs in the yard.",
+      "choices": ["is", "are", "am", "be"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "복수 명사 → There are.",
+      "explain_long": "복수 명사에는 are를 사용한다.",
+      "examples": ["There are many books.", "There are three chairs."]
+    },
+    {
+      "id": 47,
+      "stem": "My bag is ___ than yours.",
+      "choices": ["big", "bigger", "biggest", "more big"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "비교급: 형용사+er.",
+      "explain_long": "한 음절 형용사에 -er을 붙여 비교급을 만든다.",
+      "examples": ["He is taller than me.", "This box is heavier than that one."]
+    },
+    {
+      "id": 48,
+      "stem": "This is the ___ building in town.",
+      "choices": ["tall", "taller", "tallest", "more tall"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "최상급: the + 형용사-est.",
+      "explain_long": "형용사 뒤에 est를 붙이고 the를 붙여 최상급을 만든다.",
+      "examples": ["She is the smartest student.", "It is the best restaurant."]
+    },
+    {
+      "id": 49,
+      "stem": "She goes to school ___ bus.",
+      "choices": ["in", "on", "by", "at"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "교통수단: by + 수단.",
+      "explain_long": "교통수단 앞에는 보통 by를 쓴다.",
+      "examples": ["by car", "by train"]
+    },
+    {
+      "id": 50,
+      "stem": "We met ___ the park.",
+      "choices": ["in", "on", "at", "by"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "at + 구체적인 장소.",
+      "explain_long": "특정 지점을 나타낼 때 at을 사용한다.",
+      "examples": ["at school", "at the station"]
+    },
+    {
+      "id": 51,
+      "stem": "She was born ___ 2010.",
+      "choices": ["in", "on", "at", "for"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "년도/월 → in.",
+      "explain_long": "년도, 월, 계절 앞에는 in을 사용한다.",
+      "examples": ["in July", "in winter"]
+    },
+    {
+      "id": 52,
+      "stem": "We have a meeting ___ Friday afternoon.",
+      "choices": ["in", "on", "at", "by"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "요일 → on.",
+      "explain_long": "요일이나 특정한 날짜에는 on을 쓴다.",
+      "examples": ["on Monday", "on December 25th"]
+    },
+    {
+      "id": 53,
+      "stem": "There isn’t ___ sugar in the cup.",
+      "choices": ["some", "any", "much", "many"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "부정문에는 any.",
+      "explain_long": "any는 주로 부정문/의문문에서 사용한다.",
+      "examples": ["I don’t have any friends.", "Are there any books?"]
+    },
+    {
+      "id": 54,
+      "stem": "He has ___ friends in this school.",
+      "choices": ["many", "much", "some", "any"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "가산 복수 명사 → many.",
+      "explain_long": "many는 가산 명사 복수형과 함께 사용한다.",
+      "examples": ["many books", "many teachers"]
+    },
+    {
+      "id": 55,
+      "stem": "She drinks ___ water every day.",
+      "choices": ["many", "much", "any", "some"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "불가산 명사 양 → much.",
+      "explain_long": "much는 불가산 명사와 함께 양을 나타낸다.",
+      "examples": ["much milk", "much money"]
+    },
+    {
+      "id": 56,
+      "stem": "I have ___ books to read.",
+      "choices": ["much", "many", "some", "any"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "긍정문에는 some.",
+      "explain_long": "긍정문에서는 some을 사용한다.",
+      "examples": ["some apples", "some chairs"]
+    },
+    {
+      "id": 57,
+      "stem": "He ___ goes to the library.",
+      "choices": ["always", "sometime", "never", "every"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "빈도부사 always.",
+      "explain_long": "빈도부사는 주어 뒤, 동사 앞 또는 be동사 뒤에 온다.",
+      "examples": ["She always studies hard.", "I always get up early."]
+    },
+    {
+      "id": 58,
+      "stem": "We ___ watch TV after dinner.",
+      "choices": ["never", "ever", "no", "not"],
+      "answer": 0,
+      "grade": "중1",
+      "explain_short": "부정적 빈도부사 never.",
+      "explain_long": "never는 ‘결코 ~않다’라는 뜻의 빈도부사이다.",
+      "examples": ["I never eat fast food.", "He never comes late."]
+    },
+    {
+      "id": 59,
+      "stem": "She is ___ late for school.",
+      "choices": ["always", "never", "sometimes", "often"],
+      "answer": 2,
+      "grade": "중1",
+      "explain_short": "빈도부사 sometimes.",
+      "explain_long": "sometimes는 가끔을 의미하며 문장 중간에 쓴다.",
+      "examples": ["She sometimes visits me.", "They sometimes play tennis."]
+    },
+    {
+      "id": 60,
+      "stem": "We go shopping ___ weekends.",
+      "choices": ["in", "on", "at", "by"],
+      "answer": 1,
+      "grade": "중1",
+      "explain_short": "요일/주말 → on.",
+      "explain_long": "on weekends, on Monday처럼 특정 날에는 on을 쓴다.",
+      "examples": ["on weekends", "on Christmas Day"]
+    }
+  ]
+  
