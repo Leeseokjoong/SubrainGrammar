@@ -1,16 +1,17 @@
 /***********************
- * Subrain 문법 퀴즈 (상세 통계 요약 포함)
+ * Subrain 문법 퀴즈 (세트 메뉴 선택 버전)
  ************************/
 
 let allProblems = [];
+let sets = [];                 // [{label, files}] 형태
 let activePool = [];
 let currentIndex = 0;
 let score = 0;
-let round = 1;                 
-let wrongListRound1 = [];      
-let totalAnswered = 0;         
-let totalToSolve = 0;          
-let wrongTries = 0;            // 라운드2에서 시도 횟수 카운트
+let round = 1;                 // 1: 전체, 2: 오답
+let wrongListRound1 = [];      // 라운드1 오답
+let totalAnswered = 0;         // 라운드에서 '맞혀서 끝낸' 개수
+let totalToSolve = 0;          // 라운드 총 문제 수
+let wrongTries = 0;            // 라운드2 틀린 시도 누계
 
 /* DOM */
 const stemEl = document.getElementById("stem");
@@ -19,42 +20,108 @@ const answerDiv = document.querySelector(".answer");
 const progressEl = document.getElementById("progress-count");
 const progressFill = document.getElementById("progress-fill");
 const nextBtn = document.getElementById("next-btn");
+const startBtn = document.getElementById("start-btn");
+const setSelect = document.getElementById("set-select");
+const loadSetBtn = document.getElementById("load-set");
+const setStatus = document.getElementById("set-status");
 
 /* 효과음 */
 function playCorrect(){ new Audio("sounds/correct.mp3").play(); }
 function playWrong(){ new Audio("sounds/wrong.mp3").play(); }
 
+/* 유틸 */
+function escapeHTML(str){
+  return String(str ?? "")
+    .replaceAll("&","&amp;").replaceAll("<","&lt;")
+    .replaceAll(">","&gt;").replaceAll('"',"&quot;")
+    .replaceAll("'","&#39;");
+}
+function getParam(name){ const u=new URL(location.href); return u.searchParams.get(name); }
+
 /* 문제 표준화 */
 function normalizeProblem(raw) {
   const q = { ...raw };
+  q.id = q.id ?? Math.random().toString(36).slice(2);
   q.stem = q.stem ?? q.question ?? "";
   q.choices = Array.isArray(q.choices) ? q.choices.slice() : [];
-  q.explain_short = q.explain_short ?? "";
-  q.explain_long  = q.explain_long  ?? "";
+  q.explain_short = q.explain_short ?? q.shortExp ?? "";
+  q.explain_long  = q.explain_long  ?? q.longExp  ?? "";
   q.examples = Array.isArray(q.examples) ? q.examples.slice() : [];
   q._answerIndex = (typeof q.answer === "number") ? q.answer : 0;
   return q;
 }
 
-/* 파일 로딩 */
-document.getElementById("file-input").addEventListener("change", async e => {
-  const file = e.target.files[0];
-  if (!file) return;
+/* 매니페스트 로딩 → 메뉴 구성
+   - m1_manifest.json
+   - 지원 형식:
+     A) { "sets":[ { "label":"M1 1-20", "files":["data/m1_1-20.json"] }, ... ] }
+     B) { "files":[ "data/m1_1-20.json", ... ] }  // 단일 세트로 취급
+*/
+async function loadManifest() {
+  const manifestPath = getParam("manifest") || "m1_manifest.json";
   try {
-    const text = await file.text();
-    const data = JSON.parse(text);
-    const arr = Array.isArray(data) ? data : (Array.isArray(data.items) ? data.items : []);
-    allProblems = arr.map(normalizeProblem).filter(p => p.stem && p.choices.length >= 2);
-    alert(`${file.name} 불러오기 완료! (${allProblems.length}문제)`);
-  } catch (err) {
-    alert("JSON 파싱 실패");
+    const res = await fetch(manifestPath);
+    if (!res.ok) throw new Error("manifest fetch failed");
+    const mj = await res.json();
+    if (Array.isArray(mj.sets) && mj.sets.length) {
+      sets = mj.sets;
+    } else if (Array.isArray(mj.files) && mj.files.length) {
+      sets = [{ label: "전체 문제", files: mj.files }];
+    } else {
+      throw new Error("manifest has no sets/files");
+    }
+    renderSetMenu();
+    setStatus.textContent = "세트를 선택하고 ‘세트 불러오기’를 누르세요.";
+  } catch (e) {
+    console.error(e);
+    setStatus.textContent = "❌ 매니페스트를 불러오지 못했습니다.";
   }
-});
+}
 
-/* 시작 */
-document.getElementById("start-btn").addEventListener("click", () => {
-  if (!allProblems || allProblems.length === 0) {
-    alert("문제 파일을 먼저 선택해주세요!");
+function renderSetMenu() {
+  setSelect.innerHTML = "";
+  sets.forEach((s, idx) => {
+    const opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = s.label || `세트 ${idx+1}`;
+    setSelect.appendChild(opt);
+  });
+  const qs = getParam("set"); // ?set=라벨이름 (선택사항)
+  if (qs) {
+    const i = sets.findIndex(s => s.label === qs);
+    if (i >= 0) setSelect.value = String(i);
+  }
+}
+
+/* 세트 로딩 */
+async function loadSelectedSet() {
+  const idx = Number(setSelect.value);
+  const choice = sets[idx];
+  if (!choice) return;
+  setStatus.textContent = "📦 문제 불러오는 중...";
+  try {
+    const merged = [];
+    for (const path of choice.files) {
+      const r = await fetch(path);
+      if (!r.ok) throw new Error(`fetch failed: ${path}`);
+      const data = await r.json();
+      const arr = Array.isArray(data) ? data : (Array.isArray(data.items) ? data.items : []);
+      for (const it of arr) merged.push(normalizeProblem(it));
+    }
+    allProblems = merged;
+    startBtn.disabled = false;
+    setStatus.textContent = `✅ '${choice.label}' 세트 준비 완료! (총 ${allProblems.length}문제)`;
+  } catch (e) {
+    console.error(e);
+    setStatus.textContent = "❌ 세트 로딩 실패. 다시 시도하세요.";
+    startBtn.disabled = true;
+  }
+}
+
+/* 시작 버튼 */
+startBtn.addEventListener("click", () => {
+  if (!allProblems.length) {
+    alert("세트를 먼저 불러오세요!");
     return;
   }
   document.querySelector(".start-screen").style.display = "none";
@@ -62,13 +129,16 @@ document.getElementById("start-btn").addEventListener("click", () => {
   startRound1();
 });
 
-/* 홈 */
+/* 세트 불러오기 버튼 */
+loadSetBtn.addEventListener("click", loadSelectedSet);
+
+/* 홈으로 */
 function goHome(){
   document.querySelector(".quiz-screen").style.display = "none";
   document.querySelector(".start-screen").style.display = "block";
 }
 
-/* 라운드 시작 */
+/* 라운드 제어 */
 function startRound1(){
   round = 1;
   activePool = allProblems.map(p => p);
@@ -112,6 +182,7 @@ function showQuestion(q){
 /* 정답 체크 */
 function checkAnswer(choiceIndex, q){
   const correctIndex = q._answerIndex;
+
   const buttons = choicesDiv.querySelectorAll("button");
   buttons.forEach((b,i)=>{
     if(i===correctIndex) b.classList.add("choice-correct");
@@ -127,28 +198,39 @@ function checkAnswer(choiceIndex, q){
   }else{
     const answerText = q.choices[correctIndex];
     answerDiv.innerHTML =
-      `<p><strong>오답!</strong> 정답은 <b>${escapeHTML(answerText)}</b><br>${escapeHTML(q.explain_short)}</p>`;
+      `<p><strong>오답!</strong> 정답은 <b>${escapeHTML(answerText)}</b> 입니다.<br>${escapeHTML(q.explain_short)}</p>`;
     playWrong();
-    if (round === 1 && !wrongListRound1.some(p => p.id === q.id)) {
-      wrongListRound1.push(q);
+
+    if (round === 1) {
+      if (!wrongListRound1.some(p => p.id === q.id)) wrongListRound1.push(q);
+    } else {
+      wrongTries++;
     }
-    if (round === 2) wrongTries++;
   }
 
-  // More 버튼
-  if (q.explain_long || (q.examples && q.examples.length > 0)) {
+  // More 토글
+  const hasLong = (q.explain_long && q.explain_long.trim().length > 0);
+  const hasEx = Array.isArray(q.examples) && q.examples.length > 0;
+  if (hasLong || hasEx) {
     const moreWrap = document.createElement("div");
     moreWrap.className = "more";
+
     const moreBtn = document.createElement("button");
     moreBtn.className = "btn-more";
     moreBtn.textContent = "More ▾";
+    moreBtn.setAttribute("aria-expanded", "false");
+
     const moreBody = document.createElement("div");
     moreBody.className = "more-body";
-    moreBody.innerHTML = `${q.explain_long ? `<p>${escapeHTML(q.explain_long)}</p>` : ""}${q.examples.map(ex=>`<li>${escapeHTML(ex)}</li>`).join("")}`;
+    const exList = hasEx ? `<ul>${q.examples.map(ex => `<li>${escapeHTML(ex)}</li>`).join("")}</ul>` : "";
+    moreBody.innerHTML = `${hasLong ? `<p>${escapeHTML(q.explain_long)}</p>` : ""}${exList}`;
+
     moreBtn.addEventListener("click", ()=>{
       const open = moreBody.classList.toggle("open");
       moreBtn.textContent = open ? "Less ▴" : "More ▾";
+      moreBtn.setAttribute("aria-expanded", String(open));
     });
+
     moreWrap.appendChild(moreBtn);
     moreWrap.appendChild(moreBody);
     answerDiv.appendChild(moreWrap);
@@ -170,26 +252,21 @@ nextBtn.addEventListener("click", ()=>{
     } else {
       activePool.splice(currentIndex, 1);
       totalAnswered++;
-      if (activePool.length === 0) {
-        endWrongRound();
-        return;
-      }
+      if (activePool.length === 0) { endWrongRound(); return; }
     }
     if (currentIndex >= activePool.length) currentIndex = 0;
     showQuestion(activePool[currentIndex]);
     return;
   }
 
+  // 라운드1
   totalAnswered++;
   currentIndex++;
-  if(currentIndex >= activePool.length){
-    endRound1();
-  } else {
-    showQuestion(activePool[currentIndex]);
-  }
+  if(currentIndex >= activePool.length) endRound1();
+  else showQuestion(activePool[currentIndex]);
 });
 
-/* 라운드1 종료 */
+/* 라운드1 종료 (상세 통계 + 오답 라운드 버튼) */
 function endRound1(){
   stemEl.textContent = "라운드 1 완료!";
   choicesDiv.innerHTML = "";
@@ -244,7 +321,7 @@ function endRound1(){
   progressEl.textContent = `${total} / ${total}`;
 }
 
-/* 라운드2 종료 */
+/* 라운드2 종료 (상세 통계 + 처음으로) */
 function endWrongRound(){
   stemEl.textContent = "🎉 오답 정복 완료!";
   choicesDiv.innerHTML = "";
@@ -281,12 +358,5 @@ function endWrongRound(){
   progressEl.textContent = "완료";
 }
 
-/* XSS 방지 */
-function escapeHTML(str){
-  return String(str ?? "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#39;");
-}
+/* 시작 시 매니페스트 읽어서 메뉴 구성 */
+loadManifest();
