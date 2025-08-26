@@ -148,6 +148,42 @@ body{
   #stem{ font-size:32px; }
 }
 /* ───────────────── 레이아웃 고정: 카드 내부 구조 안정화 ───────────────── */
+/* ───────────── 문제 문장 안정화 ───────────── */
+#stem{
+  flex: 0 0 auto;
+  min-height: 80px;          /* 한 줄 기준 */
+  max-height: 120px;         /* 두 줄까지 허용 */
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.4;
+  overflow-wrap: break-word; /* 단어가 길어도 자동 줄바꿈 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ───────────── 보기 버튼 가로 정렬 통일 ───────────── */
+.choices{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 고정 */
+  gap: 16px;
+  margin-top: 12px;
+  min-height: 220px;   /* 버튼 크기 통일 */
+  max-height: 260px;
+}
+
+.choices button{
+  height: 90px;              /* 모든 버튼 높이 통일 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  word-break: keep-all;      /* 영어 단어는 잘리지 않고 줄바꿈 */
+  white-space: normal;       /* 문장이 길면 줄바꿈 허용 */
+  padding: 10px;
+}
 
 /* 카드 전체를 세로 플렉스로 만들고, 높이를 충분히 확보 */
 .quiz-screen.card{
@@ -223,4 +259,5 @@ body{
   .choices button{ padding: 16px; font-size: 16px; }
   .answer{ min-height: 160px; max-height: 220px; }
 }
+
 
